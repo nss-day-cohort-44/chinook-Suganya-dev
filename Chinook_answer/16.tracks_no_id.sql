@@ -1,0 +1,2 @@
+-- Provide a query that shows all the Tracks, but displays no I
+-- The result should include the Album name, Media type and Genre.

@@ -2,7 +2,8 @@
 --  track name with each invoice line item.
 
 SELECT
-il.Quantity
-
-
+    il.InVoiceLineId,
+    t.Name
 FROM InvoiceLine il
+JOIN Track t 
+    ON (il.TrackId = t.TrackId)
