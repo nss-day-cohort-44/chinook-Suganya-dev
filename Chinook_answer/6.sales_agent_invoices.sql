@@ -1,12 +1,13 @@
 -- Provide a query that shows the invoices associated with each sales age
 -- The resultant table should include the Sales Agent's full name.
 
-SELECT
-e.LastName,
-e.FirstName,
-e.Title,
-i.InvoiceDate,
-i.InvoiceId
+SELECT 
+  i.InvoiceId,
+  i.InvoiceDate,
+  i.BillingCity,
+  e.FirstName,
+  e.LastName,
+  e.Title
 
 FROM Invoice i
 JOIN Employee e

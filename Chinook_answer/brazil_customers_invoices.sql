@@ -6,10 +6,12 @@
 SELECT
     c.FirstName,
     c.LastName,
-    i.InVoiceId,
-    i.InVoiceDate,
-    i.billingCountry
-FROM Customer c
+    c.Country,
+    i.InvoiceId,
+    i.InvoiceDate,
+    i.BillingCountry
+
+FROM Customer c 
 JOIN Invoice i 
-    ON (i.customerId == c.customerId )
-WHERE Country ='Brazil';
+  ON(c.CustomerId = i.CustomerId)
+WHERE c.Country IS 'Brazil'

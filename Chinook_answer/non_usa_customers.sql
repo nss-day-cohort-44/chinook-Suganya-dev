@@ -3,10 +3,10 @@ Provide a query showing Customers (just their full names, customer ID and countr
 
 
 SELECT 
+c.CustomerId,
 c.FirstName,
 c.LastName,
-c.CustomerID,
 c.Country
 
-FROM Customer c 
-WHERE Country IS NOT 'USA';
+FROM Customer c
+WHERE Country IS NOT 'USA'

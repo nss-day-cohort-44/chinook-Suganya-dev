@@ -1,15 +1,17 @@
 -- Provide a query that shows all the Tracks, but displays no ID
 -- The result should include the Album name, Media type and Genre.
 
-SELECT 
-    t.name Trackname,
+
+
+SELECT
+    t.name TrackName,
+    mt.name MediaTypeName,
     a.title,
-    mt.name MediatypeName,
-    g.name
+    g.name GenreName
 FROM Track t
 JOIN Album a
-    ON(t.AlbumId = a.AlbumId)
+    ON(t.albumId = a.albumId)
 JOIN MediaType mt
-    On(t.MediatypeId = mt.MediatypeId)
+    ON(t.mediaTypeId = mt.mediaTypeId)
 JOIN Genre g
-    ON(t.GenreId = g.GenreId)
+    ON (t.genreId = g.genreId)

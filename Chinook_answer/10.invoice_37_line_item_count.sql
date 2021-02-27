@@ -3,10 +3,11 @@
 
 
 SELECT 
+    il.InvoiceId,
     il.Quantity,
-    i.InvoiceId,
-    count(il.Quantity)
+    count(il.Quantity),
+    i.InvoiceID
 FROM InvoiceLine il
 JOIN Invoice i
-    ON(il.InvoiceId = i.InvoiceId)
-WHERE i.InvoiceId = 37
+   ON (il.InvoiceLineId = i.InvoiceId)
+WHERE  i.InvoiceID = 37

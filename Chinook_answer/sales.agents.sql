@@ -1,6 +1,7 @@
 -- Provide a query showing only the Employees who are Sales Agents.
 
-SELECT
-* 
-FROM Employee
-WHERE Title ='Sales Support Agent';
+
+
+SELECT * 
+FROM Employee e
+WHERE e.Title IS 'Sales Support Agent'
